@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Kyle&#39;s Note</title>
+  
+  <subtitle>Quick notes</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2018-03-14T07:58:12.425Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Kyle</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>markdown居中</title>
+    <link href="http://yoursite.com/2018/03/14/markdown%E5%B1%85%E4%B8%AD/"/>
+    <id>http://yoursite.com/2018/03/14/markdown居中/</id>
+    <published>2018-03-14T06:43:35.000Z</published>
+    <updated>2018-03-14T07:58:12.425Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;居中&quot;&gt;&lt;a href=&quot;#居中&quot; class=&quot;headerlink&quot; title=&quot;居中&quot;&gt;&lt;/a&gt;居中&lt;/h4&gt;&lt;blockquote&gt;
+&lt;center&gt;诶嘿&lt;/center&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;左对齐&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="语法" scheme="http://yoursite.com/tags/%E8%AF%AD%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>分类实验</title>
+    <link href="http://yoursite.com/2018/03/14/%E5%88%86%E7%B1%BB%E5%AE%9E%E9%AA%8C/"/>
+    <id>http://yoursite.com/2018/03/14/分类实验/</id>
+    <published>2018-03-14T02:59:39.000Z</published>
+    <updated>2018-03-14T07:55:49.874Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;第一次做这个东西，也不清楚为什么，先插入一张图片试一试吧，哈哈哈哈&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/mavatar.jpg&quot; alt=&quot;我与小可爱&quot;&gt;&lt;/p&gt;
+&lt;center&gt;内蒙古呼伦贝尔五日游&lt;/center&gt;
+    
+    </summary>
+    
+      <category term="碎碎念" scheme="http://yoursite.com/categories/%E7%A2%8E%E7%A2%8E%E5%BF%B5/"/>
+    
+    
+      <category term="category" scheme="http://yoursite.com/tags/category/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>几记一次印象深刻的事情</title>
+    <link href="http://yoursite.com/2018/03/13/%E8%AE%B0%E4%B8%80%E6%AC%A1%E5%8D%B0%E8%B1%A1%E6%B7%B1%E5%88%BB%E7%9A%84%E4%BA%8B%E6%83%85/"/>
+    <id>http://yoursite.com/2018/03/13/记一次印象深刻的事情/</id>
+    <published>2018-03-13T08:22:37.000Z</published>
+    <updated>2018-03-14T07:54:30.703Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;十一月真是一个忙碌的季节，电商平台携商家精心布局撒网等鱼入网，买家手握巨款蠢蠢欲动，物流赶忙提升内容分发系统的高效性与健壮性，一副生机勃勃的画面。作为不怎么热衷购物的我在这番阵势下也激动的跃跃欲试，为了做好热身运动，我提前升级了下电脑设备。那买买买的节奏可谓十分轻快明朗，让人欲罢不能。钱要花在刀刃上，这是我获得的人生的第二条真谛，还挺早获得的，就是执行力不够。我把这个错误归结为冲动的欲望在作祟，但很明显是自我欺骗，显然应该怪商家太会营销打广告。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://notes.iissnan.com/uploads/upgrade-computer-components/shut-up-and-take-my-money.jpg&quot; alt=&quot;闭嘴，一手交钱一手交货&quot;&gt;&lt;/p&gt;
+&lt;p&gt;​                       &lt;center&gt; &lt;a href=&quot;http://notes.iissnan.com/uploads/upgrade-computer-components/shut-up-and-take-my-money.jpg&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;闭嘴，一手交钱一手交货&lt;/a&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;常话说的好，高富玩表，土豪玩车，屌丝玩电脑。作为一名屌丝中的战斗机，那电脑必须玩得溜。人生真谛第三条，既然决定做一件事情，就把这叫事情做好，无关贫富贵贱，此乃工匠本色。看着那些陪伴多年，依然坚守岗位默默奋斗的电子设备，我想是时候了，是时候来个咸鱼翻身，再扑腾一阵子。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="碎碎念" scheme="http://yoursite.com/tags/%E7%A2%8E%E7%A2%8E%E5%BF%B5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>思虑</title>
+    <link href="http://yoursite.com/2018/03/12/%E6%80%9D%E8%99%91/"/>
+    <id>http://yoursite.com/2018/03/12/思虑/</id>
+    <published>2018-03-12T08:22:37.000Z</published>
+    <updated>2018-03-13T07:05:10.380Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ol&gt;
+&lt;li&gt;android&lt;/li&gt;
+&lt;li&gt;java&lt;/li&gt;
+&lt;li&gt;kotlin&lt;/li&gt;
+&lt;li&gt;python   today learning&lt;/li&gt;
+&lt;li&gt;deepai&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+    
+      <category term="thinking" scheme="http://yoursite.com/tags/thinking/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>单元测试</title>
+    <link href="http://yoursite.com/2018/03/09/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"/>
+    <id>http://yoursite.com/2018/03/09/单元测试/</id>
+    <published>2018-03-09T08:22:37.000Z</published>
+    <updated>2018-03-13T07:05:19.599Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;创建第一个单元测试&quot;&gt;&lt;a href=&quot;#创建第一个单元测试&quot; class=&quot;headerlink&quot; title=&quot;创建第一个单元测试&quot;&gt;&lt;/a&gt;创建第一个单元测试&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://upload-images.jianshu.io/upload_images/580359-20cce1345b5076de.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;
+&lt;p&gt;向类中添加一些基本的算术运算方法，比如加法和减法。将下列代码复制到编辑器中。不用担心实际的实现，暂时让所有的方法返回0。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="test" scheme="http://yoursite.com/tags/test/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2018/03/09/hello-world/"/>
+    <id>http://yoursite.com/2018/03/09/hello-world/</id>
+    <published>2018-03-09T07:07:03.764Z</published>
+    <updated>2018-03-09T07:07:03.765Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>

@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.0.5" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.0.5">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.0.5">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.0.5">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.0.5" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '6.0.5',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: 'G9CPQM3EB5',
+      apiKey: 'f6c1e74a3e22e48d7bd50c5e91cca69f',
+      indexName: 'blog',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+<meta name="description" content="纸上得来终觉浅，绝知此事要躬行。 《冬夜读书示子聿》—— 陆游   20岁到30岁这十年间，可能是我们最重要的十年，你要确定自己的世界观、价值观，选择一个合适的人生伴侣，慢慢定下来，可是这其间充满了挫折、怀疑和困惑。 25岁之前，你可能和我一样，充满了各种千奇百怪的想法和想要去闯荡的心，可结果总是混混当当，想做的事情只是停留在了“想”的层面上，并没有什么结果，如今我已开始奔三，好多事情还没有来得及">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kyle&#39;s Note">
+<meta property="og:url" content="http://yoursite.com/about/index.html">
+<meta property="og:site_name" content="Kyle&#39;s Note">
+<meta property="og:description" content="纸上得来终觉浅，绝知此事要躬行。 《冬夜读书示子聿》—— 陆游   20岁到30岁这十年间，可能是我们最重要的十年，你要确定自己的世界观、价值观，选择一个合适的人生伴侣，慢慢定下来，可是这其间充满了挫折、怀疑和困惑。 25岁之前，你可能和我一样，充满了各种千奇百怪的想法和想要去闯荡的心，可结果总是混混当当，想做的事情只是停留在了“想”的层面上，并没有什么结果，如今我已开始奔三，好多事情还没有来得及">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-03-14T07:49:51.252Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Kyle&#39;s Note">
+<meta name="twitter:description" content="纸上得来终觉浅，绝知此事要躬行。 《冬夜读书示子聿》—— 陆游   20岁到30岁这十年间，可能是我们最重要的十年，你要确定自己的世界观、价值观，选择一个合适的人生伴侣，慢慢定下来，可是这其间充满了挫折、怀疑和困惑。 25岁之前，你可能和我一样，充满了各种千奇百怪的想法和想要去闯荡的心，可结果总是混混当当，想做的事情只是停留在了“想”的层面上，并没有什么结果，如今我已开始奔三，好多事情还没有来得及">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Kyle's Note" type="application/atom+xml" />
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/about/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+  <title> | Kyle's Note</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Kyle's Note</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Quick notes</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />公益404</a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+  
+
+
+
+ </div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+    
+    
+    <div class="post-block page">
+      <header class="post-header">
+
+<h1 class="post-title" itemprop="name headline"></h1>
+
+<div class="post-meta">
+  
+  
+
+
+
+</div>
+
+</header>
+
+      
+      
+      
+      <div class="post-body">
+        
+        
+          <blockquote class="blockquote-center">纸上得来终觉浅，绝知此事要躬行。<br> 《冬夜读书示子聿》—— <strong>陆游</strong></blockquote>
+
+<blockquote>
+<p>20岁到30岁这十年间，可能是我们最重要的十年，你要确定自己的世界观、价值观，选择一个合适的人生伴侣，慢慢定下来，可是这其间充满了挫折、怀疑和困惑。 25岁之前，你可能和我一样，充满了各种千奇百怪的想法和想要去闯荡的心，可结果总是混混当当，想做的事情只是停留在了“想”的层面上，并没有什么结果，如今我已开始奔三，好多事情还没有来得及做，好多想法也早已泯灭，我不要再过这样子的生活，我想改变，成为更好的自己！</p>
+</blockquote>
+<blockquote>
+<p>如果回到25岁或者更年轻又或者对现在的你，你想告诉自己什么，你要怎么做？ Good luck and make it count .</p>
+</blockquote>
+<p>当我步入26岁，意识到时间越过越快，好多事情再不做就来不及了，所以就有了这个博客，记录自己这一路走来的历程，希望能忠于自己，坚持下去，毕业后的第一个10年是积累的时间，期间需要慢慢改变学习的方式方法，积累行业知识，认识行业牛人，本博客目的在于积累：汇总日常所学，分享读书笔记，整理网络资料，忠于自己，忠于理想！</p>
+<h2 id="关于Kyle"><a href="#关于Kyle" class="headerlink" title="关于Kyle"></a>关于Kyle</h2><hr>
+<p>介绍自己是最困难的一件事情，它意味着，你把自己定位成什么，意味着你想过什么样的生活，还意味着一旦你做出介绍，那么，你自己的思维就局限于此，因为到目前为止我都没有想清楚「我是谁」这个困难的哲学问题，所以我不断的给自己打 tag，让越来越多的标签来来模糊的形成这么一个人，名字叫 <code>kyle</code></p>
+<blockquote>
+<p>93年、开发者、阿里、工程师、程序猿、java、net、C#、js、前端、分布式、架构、Nosql、Git、Github、开源、全栈 、音乐、电影、美剧、阅读、历史、武侠、狗、写作、独立博主、跑步、游泳、Apple、Android、APP、电子设备、淳朴、极简 、效率、敏捷个人、时间管理</p>
+</blockquote>
+<blockquote>
+<p>每个平凡的人都有着自己的故事，有那么多沉默的时光，默默的努力着，忍受孤独与寂寞，没有抱怨，没有诉苦，那段连自己回忆起来都感动的日子，值得记录，铭记心中。努力的去做，去尝试更多的可能，不辜负年轻，忠于自己，忠于理想！ Try a better life , you deserve more !</p>
+</blockquote>
+<h2 id="公益活动"><a href="#公益活动" class="headerlink" title="公益活动"></a>公益活动</h2><hr>
+<p>为什么要公益？在我长大的过程中，有无数的人帮助过我，那个时候我就想着将来一定要回报他人，帮助更多的人，可这件事情一直没有来得及做。当我看到《<a href="http://movie.douban.com/subject/25835293/" target="_blank" rel="noopener">失孤</a>》《<a href="http://movie.douban.com/subject/25798222/" target="_blank" rel="noopener">亲爱的</a>》尤其是看完《<a href="http://www.iqiyi.com/v_19rrnokglg.html#vfrm=2-3-0-1" target="_blank" rel="noopener">失孤背后的故事</a>》的时候，我想，这或许是个契机，应该就从此刻做起来，要坚信世界之大，只要每个像我这一样的小人物做出一些改变，世界就会美好一点，正在阅读的朋友，希望你与我一起，参与到公益中来，让此事成为我们的信仰，一起帮助更多需要帮助的人！</p>
+<p>让我们一起为世界更美好一点而美丽！简单从事公益的几个方法：</p>
+<ul>
+<li><a href="http://gongyi.qq.com/" target="_blank" rel="noopener">腾讯公益</a> （月捐、项目捐助等活动）， 这个和微信「公益行」公众号的内容是一样的。</li>
+<li>微信运动 - 行动捐（关注「微信运动」公众号，点击运动捐助即可），关注「公益行」公众号有更多的公益活动</li>
+<li>支付宝 - 爱心捐赠（打开支付宝，找到爱心捐赠，选择你想要自助的项目即可）</li>
+<li><a href="http://now.taobao.com/" target="_blank" rel="noopener">阿里公益 - 天天正能量</a></li>
+</ul>
+<h2 id="我在坚持的行动"><a href="#我在坚持的行动" class="headerlink" title="我在坚持的行动~"></a>我在坚持的行动~</h2><hr>
+<ul>
+<li>100天行动计划 之 「发现生活之美」，每日一张图 <a href="https://instagram.com/ixirong/" target="_blank" rel="noopener">我的Instagram地址</a></li>
+<li>30天挑战每日贡献 github 内容 <a href="https://github.com/xirong" target="_blank" rel="noopener">我的GitHub地址</a></li>
+<li>开始敏捷个人计划，详情见 <a href="http://www.zhoujingen.cn/blog/" target="_blank" rel="noopener">周金根独立博客</a>，也推荐各位加入一起分享改变</li>
+<li>我的 Mooc 学习计划</li>
+<li>……</li>
+</ul>
+<h2 id="One-more-thing-……"><a href="#One-more-thing-……" class="headerlink" title="One more thing ……"></a>One more thing ……</h2><hr>
+<p>无论何时你都要记住 <code>kyle</code> 只是一个虚拟的网络 ID，只是一个来自网络上面的声音，可在活生生的世界里面，却真实的生存着这么一个人，有着博文中的价值观和一些独特的想法，脚踏实地的行走在这条艰难的人生路上，努力跟随自己的内心，去追求理想中的生活； <code>kyle</code> 是谁并不重要，重要的是芸芸众生中有那么一批人，有所想有所做，不焦不燥，忠于自己，忠于理想，不断突破着、坚守着，或许你看到文章中的某些文字会产生共鸣，引起改变，进而将这种改变带给身边的人，让自己的生活更加美好，这是平凡的力量！ 一个平凡的人，用 <code>kyle</code> 这个 ID 摆弄着一些文字，影响着一些人，这就足够了……</p>
+<h2 id="联系-kyle"><a href="#联系-kyle" class="headerlink" title="联系 kyle"></a>联系 kyle</h2><ul>
+<li><a href="/images/weixin.JPG">微信</a></li>
+<li><a href="http://weibo.com/jackieliuxirong" target="_blank" rel="noopener">微博</a></li>
+<li><a href="https://github.com/zhutiankang" target="_blank" rel="noopener">GitHub</a></li>
+<li><a href="zhutiankang@126.com">MailMe(邮件联系)</a></li>
+</ul>
+<p>与我一起，聆听这首 Beyond 的《海阔天空》，感受内心深处的触动 ~</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="350" height="86" src="//music.163.com/outchain/player?type=2&id=28875146&auto=0&height=66"></iframe>
+        
+      </div>
+      
+      
+      
+    </div>
+    
+
+
+
+    
+    
+    
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/mavatar.jpg"
+                alt="Kyle" />
+            
+              <p class="site-author-name" itemprop="name">Kyle</p>
+              <p class="site-description motion-element" itemprop="description">胡编一通，乱写一气</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives">
+                
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/zhutiankang" target="_blank" title="GitHub"><i class="fa fa-fw fa-globe"></i>GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:zhutiankang@126.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="/images/weixin.JPG" target="_blank" title="微信"><i class="fa fa-fw fa-globe"></i>微信</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://weibo.com/your-user-name" target="_blank" title="微博"><i class="fa fa-fw fa-globe"></i>微博</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://douban.com/people/your-user-name" target="_blank" title="豆瓣"><i class="fa fa-fw fa-globe"></i>豆瓣</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://www.zhihu.com/people/your-user-name" target="_blank" title="知乎"><i class="fa fa-fw fa-globe"></i>知乎</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#关于Kyle"><span class="nav-number">1.</span> <span class="nav-text">关于Kyle</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#公益活动"><span class="nav-number">2.</span> <span class="nav-text">公益活动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#我在坚持的行动"><span class="nav-number">3.</span> <span class="nav-text">我在坚持的行动~</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#One-more-thing-……"><span class="nav-number">4.</span> <span class="nav-text">One more thing ……</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#联系-kyle"><span class="nav-number">5.</span> <span class="nav-text">联系 kyle</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Kyle</span>
+
+  
+
+  
+</div>
+
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a> v6.0.5</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.0.5"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.0.5"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.0.5"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.0.5"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.5"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.5"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.5"></script>
+
+
+
+  
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=6.0.5"></script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
