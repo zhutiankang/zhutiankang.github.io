@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-03-15T10:30:41.943Z</updated>
+  <updated>2018-03-15T10:58:59.675Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>简历模板</title>
+    <link href="http://yoursite.com/2018/03/15/Kyle%E7%9A%84%E7%AE%80%E5%8E%86/"/>
+    <id>http://yoursite.com/2018/03/15/Kyle的简历/</id>
+    <published>2018-03-15T10:05:14.000Z</published>
+    <updated>2018-03-15T10:58:59.675Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;本文转载自&lt;a href=&quot;http://cv.ftqq.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;冷熊简历模板&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;Kyle的简历&quot;&gt;&lt;a href=&quot;#Kyle的简历&quot; class=&quot;headerlink&quot; title=&quot;Kyle的简历&quot;&gt;&lt;/a&gt;Kyle的简历&lt;/h1&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;A&lt;/th&gt;
+&lt;th&gt;B&lt;/th&gt;
+&lt;th&gt;C&lt;/th&gt;
+&lt;th&gt;D&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h1 id=&quot;联系方式&quot;&gt;&lt;a href=&quot;#联系方式&quot; class=&quot;headerlink&quot; title=&quot;联系方式&quot;&gt;&lt;/a&gt;联系方式&lt;/h1&gt;&lt;p&gt;（HR会打印你的简历，用于在面试的时候联系，所以联系方式放到最上边会比较方便）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;手机：135…. （如果是外地手机，可注明。如经常关机，要写上最优联系时间）&lt;/li&gt;
+&lt;li&gt;Email：&lt;a href=&quot;mailto:goodman@gmail.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;goodman@gmail.com&lt;/a&gt; （虽然我觉得QQ邮箱无所谓，不过有些技术人员比较反感，建议用G，非要用的话，不要用数字邮箱名）&lt;/li&gt;
+&lt;li&gt;QQ/微信号：6…（提供一个通过网络可以联系到你的方式）&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="职业" scheme="http://yoursite.com/categories/%E8%81%8C%E4%B8%9A/"/>
+    
+    
+      <category term="简历" scheme="http://yoursite.com/tags/%E7%AE%80%E5%8E%86/"/>
+    
+  </entry>
   
   <entry>
     <title>alibaba代码检测插件使用</title>
@@ -72,27 +118,6 @@
   </entry>
   
   <entry>
-    <title>AndroidStudio使用模拟测试</title>
-    <link href="http://yoursite.com/2018/03/15/AndroidStudio%E4%BD%BF%E7%94%A8%E6%A8%A1%E6%8B%9F%E6%B5%8B%E8%AF%95/"/>
-    <id>http://yoursite.com/2018/03/15/AndroidStudio使用模拟测试/</id>
-    <published>2018-03-15T08:05:14.000Z</published>
-    <updated>2018-03-15T08:38:04.983Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;绘制布局&quot;&gt;&lt;a href=&quot;#绘制布局&quot; class=&quot;headerlink&quot; title=&quot;绘制布局&quot;&gt;&lt;/a&gt;绘制布局&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://upload-images.jianshu.io/upload_images/580359-40a6436d81203a3d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/488&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;
-&lt;p&gt;为app添加一些Views和简单的交互。使用一个用户可以输入名字的EditText，欢迎用户的Button和用于输出的TextView&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Android" scheme="http://yoursite.com/categories/Android/"/>
-    
-    
-      <category term="测试" scheme="http://yoursite.com/tags/%E6%B5%8B%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Hexo命令</title>
     <link href="http://yoursite.com/2018/03/15/Hexo%E5%91%BD%E4%BB%A4/"/>
     <id>http://yoursite.com/2018/03/15/Hexo命令/</id>
@@ -111,6 +136,27 @@
     
     
       <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AndroidStudio使用模拟测试</title>
+    <link href="http://yoursite.com/2018/03/15/AndroidStudio%E4%BD%BF%E7%94%A8%E6%A8%A1%E6%8B%9F%E6%B5%8B%E8%AF%95/"/>
+    <id>http://yoursite.com/2018/03/15/AndroidStudio使用模拟测试/</id>
+    <published>2018-03-15T08:05:14.000Z</published>
+    <updated>2018-03-15T08:38:04.983Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;绘制布局&quot;&gt;&lt;a href=&quot;#绘制布局&quot; class=&quot;headerlink&quot; title=&quot;绘制布局&quot;&gt;&lt;/a&gt;绘制布局&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://upload-images.jianshu.io/upload_images/580359-40a6436d81203a3d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/488&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;
+&lt;p&gt;为app添加一些Views和简单的交互。使用一个用户可以输入名字的EditText，欢迎用户的Button和用于输出的TextView&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Android" scheme="http://yoursite.com/categories/Android/"/>
+    
+    
+      <category term="测试" scheme="http://yoursite.com/tags/%E6%B5%8B%E8%AF%95/"/>
     
   </entry>
   
