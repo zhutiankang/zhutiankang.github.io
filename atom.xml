@@ -67,12 +67,12 @@
     <link href="http://yoursite.com/2018/03/15/alibaba%E4%BB%A3%E7%A0%81%E6%A3%80%E6%B5%8B%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8/"/>
     <id>http://yoursite.com/2018/03/15/alibaba代码检测插件使用/</id>
     <published>2018-03-15T09:05:14.000Z</published>
-    <updated>2018-03-15T10:30:41.943Z</updated>
+    <updated>2018-03-15T11:20:12.677Z</updated>
     
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;本文转载自&lt;code&gt;https://github.com/alibaba/p3c/idea-plugin&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;本文转载自&lt;code&gt;https://github.com/alibaba/p3c/blob/master/idea-plugin/README_cn.md&lt;/code&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&quot;插件安装&quot;&gt;&lt;a href=&quot;#插件安装&quot; class=&quot;headerlink&quot; title=&quot;插件安装&quot;&gt;&lt;/a&gt;插件安装&lt;/h2&gt;&lt;h3 id=&quot;通过Jetbrains官方仓库安装&quot;&gt;&lt;a href=&quot;#通过Jetbrains官方仓库安装&quot; class=&quot;headerlink&quot; title=&quot;通过Jetbrains官方仓库安装&quot;&gt;&lt;/a&gt;通过Jetbrains官方仓库安装&lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;&lt;p&gt;打开 Settings &amp;gt;&amp;gt; Plugins &amp;gt;&amp;gt; Browse repositories…&lt;/p&gt;
