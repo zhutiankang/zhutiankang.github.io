@@ -1,0 +1,1323 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.0.5" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.0.5">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.0.5">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.0.5">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.0.5" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '6.0.5',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: 'G9CPQM3EB5',
+      apiKey: 'f6c1e74a3e22e48d7bd50c5e91cca69f',
+      indexName: 'blog',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  
+  <meta name="keywords" content="Git," />
+
+
+<meta name="description" content="Git安装 地址：https://git-scm.com/downloads 下载对应平台的git版本安装即可  Git配置配置快捷命令 在用户根目录下（如C:/user/Administrator）新建配置文件命名为.gitconfig 将以下内容写入文件  12345678910111213[user]	email = xxx(邮箱如：ztk1993@163.com）	name = xxx(名">
+<meta name="keywords" content="Git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git基本使用方式">
+<meta property="og:url" content="http://yoursite.com/2018/03/15/Git基本使用方式/index.html">
+<meta property="og:site_name" content="Kyle&#39;s Note">
+<meta property="og:description" content="Git安装 地址：https://git-scm.com/downloads 下载对应平台的git版本安装即可  Git配置配置快捷命令 在用户根目录下（如C:/user/Administrator）新建配置文件命名为.gitconfig 将以下内容写入文件  12345678910111213[user]	email = xxx(邮箱如：ztk1993@163.com）	name = xxx(名">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3387045-59f6d56c28a3899a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3387045-62df4a4eac63468f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3387045-d54f9fe30b03fe7f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3387045-4572bc9d5adc98a3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3387045-949e49dd02c7ae94.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3387045-46651d34cf8ec9f6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3387045-872f5f8d5060bd31.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3387045-cadf7ff2edf02050.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3387045-16fe207be9e2277c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3387045-4c233c1b47e23699.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3387045-57f1d9bb6a85efbe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3387045-86db6a64d051cbdd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3387045-6e62584e09a00e7e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3387045-4e777d0e4f77f05a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3387045-f3651b0d61ebd201.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3387045-4088e8410e2acd6f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3387045-109dd0116dedd8b5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3387045-4351c472dd742209.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3387045-5333cb010591130a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3387045-12250b8f8abdc85e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3387045-c743b023bc3dcabe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3387045-cf217d5e7de4e195.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3387045-55de80cb92dec69b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3387045-b5f5018f64e72824.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3387045-aefce3a426a954d9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3387045-5aebeb89ba3fc1f1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3387045-b132861f726ae59f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3387045-d64430d355ed6def.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3387045-3c3191ec2e56ea1a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3387045-1f20e76f6ce12805.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3387045-6250f319f52a53bf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3387045-4daf43043dacbe62.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-03-15T08:29:17.146Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Git基本使用方式">
+<meta name="twitter:description" content="Git安装 地址：https://git-scm.com/downloads 下载对应平台的git版本安装即可  Git配置配置快捷命令 在用户根目录下（如C:/user/Administrator）新建配置文件命名为.gitconfig 将以下内容写入文件  12345678910111213[user]	email = xxx(邮箱如：ztk1993@163.com）	name = xxx(名">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/3387045-59f6d56c28a3899a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Kyle's Note" type="application/atom+xml" />
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/03/15/Git基本使用方式/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+  <title>Git基本使用方式 | Kyle's Note</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Kyle's Note</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Quick notes</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />公益404</a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+  
+
+
+
+ </div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/15/Git基本使用方式/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Kyle">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mavatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kyle's Note">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Git基本使用方式</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-15T16:07:14+08:00">2018-03-15</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Android/" itemprop="url" rel="index"><span itemprop="name">Android</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="Git安装"><a href="#Git安装" class="headerlink" title="Git安装"></a>Git安装</h2><ul>
+<li>地址：<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">https://git-scm.com/downloads</a></li>
+<li>下载对应平台的git版本安装即可</li>
+</ul>
+<h2 id="Git配置"><a href="#Git配置" class="headerlink" title="Git配置"></a>Git配置</h2><h3 id="配置快捷命令"><a href="#配置快捷命令" class="headerlink" title="配置快捷命令"></a>配置快捷命令</h3><ul>
+<li>在用户根目录下（如C:/user/Administrator）<code>新建</code>配置文件命名为.gitconfig</li>
+<li>将以下内容写入文件</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[user]</span><br><span class="line">	email = xxx(邮箱如：ztk1993@163.com）</span><br><span class="line">	name = xxx(名字如：zhutiankang）</span><br><span class="line">[alias]</span><br><span class="line">	st = status</span><br><span class="line">	ci = commit</span><br><span class="line">	br = branch</span><br><span class="line">	co = checkout</span><br><span class="line">	glog = log --pretty=oneline</span><br><span class="line">	fullclone = clone --recursive</span><br><span class="line">	pus = push origin master</span><br><span class="line">	pul = !git pull --rebase origin master&amp;&amp; git submodule update --init --recursive</span><br><span class="line">	lg = log --graph --pretty=format:&apos;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset&apos; --abbrev-commit</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="配置忽略文件"><a href="#配置忽略文件" class="headerlink" title="配置忽略文件"></a>配置忽略文件</h3><ul>
+<li>将.gitignore文件放置到项目根目录下（根据具体目录情况进行配置）</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"># OSX</span><br><span class="line"></span><br><span class="line">*.DS_Store</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># Gradle files</span><br><span class="line">build/</span><br><span class="line">build_out/</span><br><span class="line">.gradle/</span><br><span class="line">*/build/</span><br><span class="line">captures/</span><br><span class="line"></span><br><span class="line">gradle/</span><br><span class="line"># IDEA</span><br><span class="line">*.iml</span><br><span class="line">.idea/.name</span><br><span class="line">.idea/encodings.xml</span><br><span class="line">.idea/inspectionProfiles/Project_Default.xml</span><br><span class="line">.idea/inspectionProfiles/profiles_settings.xml</span><br><span class="line">.idea/misc.xml</span><br><span class="line">.idea/modules.xml</span><br><span class="line">.idea/scopes/scope_settings.xml</span><br><span class="line">.idea/vcs.xml</span><br><span class="line">.idea/workspace.xml</span><br><span class="line">.idea/libraries</span><br><span class="line">.idea/runConfigurations.xml</span><br><span class="line">.idea/compiler.xml</span><br><span class="line">.idea/copyright/profiles_settings.xml</span><br><span class="line">.idea/gradle.xml</span><br><span class="line">.idea/</span><br><span class="line"></span><br><span class="line"># Built application files</span><br><span class="line">*.ap_</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># Files for the Dalvik VM</span><br><span class="line">*.dex</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># Java class files</span><br><span class="line">*.class</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># Local configuration file (sdk path, etc)</span><br><span class="line">local.properties</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># Log Files</span><br><span class="line">*.log</span><br><span class="line"></span><br><span class="line"># Special</span><br><span class="line">obj/</span><br><span class="line">app/obj/local/</span><br></pre></td></tr></table></figure>
+<ul>
+<li>凡是在列表中的文件（*表示所有）都将被git忽略，对这些文件的任何改动，git都不会追踪</li>
+<li>但是有时我们只想追踪某几个文件，其它都忽略，可以如下配置，！后面的内容为追踪的文件<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line">!.gitignore</span><br><span class="line">!README.md</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="Git使用"><a href="#Git使用" class="headerlink" title="Git使用"></a>Git使用</h2><ul>
+<li>命令行使用（windows打开git bash , mac 打开终端）</li>
+<li>Git bash是命令行工具，内部使用linux指令集（linux使用文件另附）</li>
+<li>更多linux命令<a href="http://www.php100.com/html/webkaifa/Linux/2009/1106/3485.html" target="_blank" rel="noopener">http://www.php100.com/html/webkaifa/Linux/2009/1106/3485.html</a></li>
+</ul>
+<h3 id="一-准备工作"><a href="#一-准备工作" class="headerlink" title="一.准备工作"></a>一.准备工作</h3><ul>
+<li><p>新建仓库（进入到项目的根目录下）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>添加忽略规则，将.gitignore文件放置到根目录下</p>
+</li>
+<li>添加文件，将需要管理的文件加入到根目录下</li>
+</ul>
+<h3 id="二-代码管理"><a href="#二-代码管理" class="headerlink" title="二.代码管理"></a>二.代码管理</h3><ul>
+<li><strong>查看状态</strong><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git st</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/3387045-59f6d56c28a3899a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>红色表示已修改未保存到缓存区，绿色表示已保存到缓存区<br></p>
+<p>Git有三个状态，一是修改未保存到缓存，二是保存到缓存，三是提交到版本库<br><br>我们可以对比着word文档来学习，状态一就相当于你在word中修改了一些东西，但是没有按ctrl+s键保存起来，状态二就是你修改了东西后按了ctrl+s，暂时存起来了，状态三就是点击了另存为，将它另外存放起来了<br></p>
+<ul>
+<li><strong>保存到缓存区</strong><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add 文件路径（添加单个文件到缓存）</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/3387045-62df4a4eac63468f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>一开始修改了homepage和loading两个文件，git st后显示红色<br><br>使用git add后，将homepage加入到缓存区<br><br>git st后，发现homepage变为绿色<br><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add -u（添加所有修改到缓存）</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3387045-d54f9fe30b03fe7f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>一开始修改了homepage和loading两个文件，git st后显示红色<br><br>使用git add -u后，将homepage和loading一起加入到缓存区<br><br>git st后，发现homepage和loading变为绿色<br><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add . （添加所有文件到缓存，包括新建的文件）</span><br></pre></td></tr></table></figure></p>
+<p>此用法与git add -u类似，区别在于，git add -u只能将修改的文件加入缓存，如果该文件是新建的，要使用git add .， 这个“.”符号表示所有<br></p>
+<ul>
+<li><strong>撤销缓存区的文件</strong><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset 文件路径（撤销单个文件）</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/3387045-4572bc9d5adc98a3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>首先git st后发现，有两个已经加入到缓存区的homepage和loading文件<br><br>使用git reset homepage后，将homepage文件撤销<br><br>git st后发现，homepage变为红色<br><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset（撤销所有缓存区的文件）</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3387045-949e49dd02c7ae94.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>首先git st后发现，有两个已经加入到缓存区的homepage和loading文件<br><br>使用git reset后，将所有文件撤销<br><br>git st后发现，homepage和loading都变为红色<br></p>
+<ul>
+<li><p><strong>撤销修改</strong></p>
+<p>未添加到缓存区</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git co 文件路径（撤销单个文件的修改）</span><br><span class="line">git co -- 文件路径（撤销单个文件的修改）</span><br></pre></td></tr></table></figure>
+<p><img src="http://upload-images.jianshu.io/upload_images/3387045-46651d34cf8ec9f6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>首先使用git st，发现有homepage和loading两个文件被修改<br><br>使用git co homepage，撤销homepage的修改<br><br>git st后发现homepage文件不见了，查看原代码，代码中的修改也没有了<br><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard （撤销所有文件的修改）</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3387045-872f5f8d5060bd31.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>首先使用git st，发现有homepage和loading两个文件被修改<br><br>使用git reset –hard，撤销所有的修改<br><br>git st后发现homepage和loading文件不见了,显示nothing to commit,working directory clean， 这表示当前没有任何的修改<br></p>
+<ul>
+<li><strong>查看修改的内容</strong><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git diff 文件路径（查看单个文件修改）</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/3387045-cadf7ff2edf02050.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>首先使用git st,有两个文件Homepage,loading被修改<br><br>使用git diff homepage,可以看到哪些被修改了，按箭头上下可以翻动，”-”号表示删除（红色显示），”+”号表示添加（红色显示）<br><br>查看完成后输入q，即可退出查看<br><br>要查看所有修改直接用git diff<br><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git diff --cached （查看处于缓存区的修改）</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3387045-16fe207be9e2277c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>首先使用git st,有两个文件Homepage,loading被加入到缓存区<br><br>使用git diff homepage,可以看到哪些被修改了，按箭头上下可以翻动，”-”号表示删除（红色显示），”+”号表示添加（红色显示）<br><br>查看完成后输入q，即可退出查看<br><br>要查看所有修改直接用git diff –cached<br></p>
+<ul>
+<li><strong>将缓存区的内容提交到版本库</strong><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git ci -m “我修改了什么”</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/3387045-4c233c1b47e23699.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>首先git st,发现有两个文件homepage和loading加入到缓存区<br><br>使用git ci -m “注释”，将缓存区的内容提交到版本库，这里注释是随便写的，用于提示该commit修改了一些什么内容<br><br>git st后发现，缓存区中的内容不见了，这是因为已经提交到版本库中了<br></p>
+<ul>
+<li><strong>查看版本库中的内容</strong><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">log</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/3387045-57f1d9bb6a85efbe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>git log后发现有两个提交，“我修改了什么”是刚刚提交的commit，下面来分析下：<br><br>commit ac76744b1843665d0c6cf1add7cf758bc824c89a  (这行是一个md5值，用来唯一标识commit的)<br><br>Author:  (这行是说明该commit是谁提交的)<br><br>Date:   (提交的时间)<br><br>我修改了什么  (之前我们写的注释)<br></p>
+<ul>
+<li><strong>查看某个提交中修改的内容</strong><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git show commit号</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/3387045-86db6a64d051cbdd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>git show ac76744b,  这个ac76744b就是之前git log时对应的md5值，可以只取前6位<br><br>查看完成用q退出<br></p>
+<p><strong>我们回顾一下已讲的内容，一般来说使用流程都是</strong></p>
+<ul>
+<li>修改了一些内容，用git st看看状态</li>
+<li>git diff看看修改了哪些内容</li>
+<li>确认无误后，将需要提交的内容git add加入到缓存区</li>
+<li>git ci -m 加入到版本库中，这里说一下，平常我们都用git ci -m新建一个commit，其实通常我们不用新建commit，而是用git ci —amend(<strong><em>适用于小修小改</em></strong>)追加的方式</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/3387045-6e62584e09a00e7e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>这里我们修改了loading中的内容，然后git add -u 加入到缓存区，因为我们只是修改了很少的内容，不需要重新提交commit，所以使用git ci –amend追加到之前的commit，这时会让我们修改注释内容<br></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3387045-4e777d0e4f77f05a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>这是一个vim的编辑器，按i进入编辑模式，箭头移动光标就可以修改注释，修改好后，按ESC进入一般模式，按：进入命令模式，输入wq，保存退出<br></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3387045-f3651b0d61ebd201.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>git log后发现没有新建commit，只是追加到了之前的commit</p>
+<p>我们在使用的过程中可能要回到某一个提交，这时可以使用git reset命令，这个命令可以带参数，–mixed(回到修改未保存状态),–soft（回到缓存区状态）,–hard（删除所有修改），默认是–mixed<br><br>先讲讲–hard，这个好理解，就是把这个commit之后的所有修改都删除<br></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3387045-4088e8410e2acd6f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>这里有四个commit</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3387045-109dd0116dedd8b5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>我们先使用git reset –hard commit号，将“我修改了名字”之后的所有修改的删除<br><br>git st后发现，没有任何修改<br><br>git log后，已经回到”我修改了名字”的commit<br></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3387045-4351c472dd742209.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>下面我们试试git reset –mixed或者git reset</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3387045-5333cb010591130a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>git log我们会发现–mixed和–hard都回到了“我修改了名字”的版本，区别在于git st后–mixed将“测试reset1”和“测试reset2”中修改的内容保留下来了，这样好处在于，我们有时回到某一个commit不是要删除所有的修改，而是只想改变某一些东西，这时我们把需要改的地方改掉后，再重新提交一个commit，这样会方便很多<br><br>最后我们试试git reset –soft</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3387045-12250b8f8abdc85e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>这个跟git reset –mixed差不多，只是它是把之后的修改放入了缓存区</p>
+<h3 id="三-分支操作"><a href="#三-分支操作" class="headerlink" title="三.分支操作"></a>三.分支操作</h3><p>之前我们的操作都是同一个分支上的操作，现在我们引入分支的概念</p>
+<ul>
+<li><strong>查看分支</strong><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git br</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/3387045-c743b023bc3dcabe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>git默认都会有一个分支叫master，这个分支叫主分支，一般来说我们提交代码的时候是用这个分支来提交，但是实质上它跟普通的分支没有什么区别<br><br>为什么我们要引入分支，svn也有分支的概念，但是基本是在服务器端，我们本地基本是在一个分支上修改内容的，然后commit，有时我们改一个东西A可能需要很长时间，当还没有改完却突然要修改另外一个东西B，而且A因为没有改完不能合并到版本库，这时svn就有点乏力了，我们可能要把之前没改完的东西A删除掉，然后再来改接下来的B。<br><br>git因为是分布式的，不管是服务器端还是本地，都可以存在很多分支，这样就方便我们利用分支很好地管理代码，当我们修改任务A的时候，我们可以在分支A上修改，分支A在master的基础上新建而来，当我们还没有处理完A就要处理B时，我们可以新建另一个分支B，也是在master的基础上新建而来，这样当我们处理完B，提交后，可以回到A，继续我们之前的开发，当我们开发完A，要提交的时候，我们把B的内容整合进来，这个涉及到分支合并，之后再讲。</p>
+<ul>
+<li><strong>新建分支</strong><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git co -b TEST  //新建名为TEST的分支，当前的分支会以绿色显示</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/3387045-cf217d5e7de4e195.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>当我们新建分支时，是从当前分支的基础上新建的，新建的分支保留了当前分支所有的修改，所以新建分支相当于对当前分支的一份<code>拷贝</code>，而不是一个空的分支</p>
+<ul>
+<li><strong>切换分支</strong><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git co master  //切换到master分支</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/3387045-55de80cb92dec69b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<ul>
+<li><strong>删除分支</strong><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git br -D TEST //D大写，表示强制删除</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/3387045-b5f5018f64e72824.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<ul>
+<li><strong>分支合并</strong><br>讲合并，我们就回到之前那个例子，我们处理A任务和B任务都新建一个分支分别为TESTA和TESTB，这两个分支都是在master的基础上新建过来的</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/3387045-aefce3a426a954d9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>这里有三个分支，分别是master,TESTA,TESTB</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3387045-5aebeb89ba3fc1f1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>主分支master有两个提交</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3387045-b132861f726ae59f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>git co TESTA切换到TESTA,上面有三个提交，在master基础上多了一个“测试A”的提交</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3387045-d64430d355ed6def.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>git co TESTB切换到TESTB,上面有三个提交，在master基础上多了一个“修改B”的提交</p>
+<p>现在我们需要把A和B合并到一起</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3387045-3c3191ec2e56ea1a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>首先切换到TESTA分支，然后使用git rebase TESTB命令，将TESTB合并到TESTA前面<br><br>一般来说，如果两个分支没有冲突的话，合并就完成了，像上图有冲突就需要解决冲突<br></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3387045-1f20e76f6ce12805.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>git st后发现，TESTA和TESTB都修改了loading文件</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3387045-6250f319f52a53bf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>git diff  loading后，查看具体的冲突内容，git用特殊的符号标记冲突，&lt;&lt;&lt;&lt;&lt;&lt; HEAD到=======之前是你要合并的分支对当前文件的修改，因为现在我是要把TESTB合并到TESTA，所以HEAD就代表TESTB的修改，也就是“我是用来追加的B”是TESTB的修改，然后======与&gt;&gt;&gt;&gt;&gt;&gt;之前的内容是TESTA的修改，也就是“我是用来追加的A”这句话<br></p>
+<p>现在我们要做的就是确认好是保留A的内容，还是保留B的内容，还是A和B的内容都保留，我们修改可以用linux的vim工具来修改，也可以直接在Android studio或者xcode中修改，修改时先将&lt;&lt;&lt;&lt;&lt;，======这些特殊标记符号去掉，然后再进行修改<br></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3387045-4daf43043dacbe62.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>修改完成后，git add -u 将修改的内容加入到缓存区<br><br>然后git rebase –continue,继续rebase操作<br><br>如果要放弃合并，使用git rebase –abort<br><br>合并完成后git log，我们可以看到，TESTB的修改“修改B”已经合并进TESTA了，这时TESTA分支中就包含了A和B的修改<br></p>
+<h3 id="四-与远程服务器交互"><a href="#四-与远程服务器交互" class="headerlink" title="四.与远程服务器交互"></a>四.与远程服务器交互</h3><ul>
+<li><strong>生成rsa密钥</strong><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>查看id_rsa.pub文件，将密钥拷贝到服务器密钥库</p>
+<ul>
+<li><p><strong>从远程复制仓库</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> 服务器仓库地址</span><br></pre></td></tr></table></figure>
+<p>一般来说是新建一个空目录，然后去克隆服务器的git仓库</p>
+</li>
+<li><p><strong>在服务器添加仓库</strong></p>
+</li>
+</ul>
+<p>1.新建本地仓库<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure></p>
+<p>2.添加远程仓库地址<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin ssh://****@****:29418/zhutiankang/test.git</span><br></pre></td></tr></table></figure></p>
+<p>3.提交远程仓库<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin master</span><br></pre></td></tr></table></figure></p>
+<p>4.切换到远程分支<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git br -r 查看远程分支</span><br><span class="line">git co 切换到某一个远程分支</span><br></pre></td></tr></table></figure></p>
+<p>5.删除远程分支<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin :branch</span><br></pre></td></tr></table></figure></p>
+<p>6.拉取服务器分支并切换到临时分支<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git fetch origin branchname &amp;&amp; git co FETCH_HEAD</span><br></pre></td></tr></table></figure></p>
+<p>如：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git fetch origin GIT &amp;&amp; git co FETCH_HEAD</span><br></pre></td></tr></table></figure>
+<p>7.拉取服务器分支并合并到master<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull</span><br></pre></td></tr></table></figure></p>
+<p>pull命令相当于fetch命令加上merge命令，将服务器master分支的内容拉下来并合并到本地master<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull --rebase</span><br></pre></td></tr></table></figure></p>
+<p>以rebase形式拉取，相当于fetch命令加上rebase命令</p>
+<p>如果是pull其他分支，加上分支名<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull origin branchA</span><br></pre></td></tr></table></figure></p>
+<p>8.向服务器提交分支<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push</span><br></pre></td></tr></table></figure></p>
+<p>如果是push其他分支，加上分支名<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git push origin branchA</span><br><span class="line">git push origin branchA:branchA(用于远程服务器没有branchA的情况)</span><br></pre></td></tr></table></figure></p>
+<p>9.常见错误</p>
+<ul>
+<li><p>unable to rewind rpc post data - try increasing http.postBuffer</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config http.postBuffer 524288000</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>高版本不支持ssl</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Host www.xxx.com(改成服务器地址)</span><br><span class="line">HostkeyAlgorithms ssh-dss</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="五-子模组"><a href="#五-子模组" class="headerlink" title="五.子模组"></a>五.子模组</h3><ul>
+<li><strong>新建子模组</strong></li>
+</ul>
+<p>1.新建父项目、子项目并上传服务器<br>2.克隆父项目、子项目到不同目录<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> ssh://&lt;username&gt;@&lt;hostname&gt;:29418/project-1.git</span><br><span class="line">git <span class="built_in">clone</span> ssh://&lt;username&gt;@&lt;hostname&gt;:29418/lib1.git</span><br><span class="line">git <span class="built_in">clone</span> ssh://&lt;username&gt;@&lt;hostname&gt;:29418/lib2.git</span><br></pre></td></tr></table></figure></p>
+<p>3.将子项目变为父项目的子模组<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git submodule add ssh://&lt;username&gt;@&lt;hostname&gt;:29418/lib1.git libs/lib1（这里目录可以自由更改）</span><br><span class="line">git submodule add ssh://&lt;username&gt;@&lt;hostname&gt;:29418/lib2.git libs/lib2</span><br></pre></td></tr></table></figure></p>
+<p>4.将父项目修改的修改提交服务器<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git add -u</span><br><span class="line">git push</span><br></pre></td></tr></table></figure></p>
+<p>至此，子模组新建完成</p>
+<ul>
+<li><strong>修改子模组</strong></li>
+</ul>
+<p>1.进入子模组目录提交并上传<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git add -u</span><br><span class="line">git push</span><br></pre></td></tr></table></figure></p>
+<p>2.进入父项目提交并上传<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git add -u</span><br><span class="line">git push</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li><strong>克隆子模组</strong></li>
+</ul>
+<p>1.克隆父项目<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> --recursive ssh://&lt;username&gt;@&lt;hostname&gt;:29418/project-1.git</span><br></pre></td></tr></table></figure></p>
+<p>2.切换子项目分支<br>到子目录下（此时分支处于游离状态）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git co -b newBranch</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li><strong>更新子模组</strong></li>
+</ul>
+<ol>
+<li>在父目录下更新</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git pull</span><br><span class="line">git submodule update</span><br></pre></td></tr></table></figure>
+<ol>
+<li>切换子项目分支</li>
+</ol>
+<p>​       此时分支处于游离状态</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git co -b newBranch</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>删除子模块</strong>（分4步走）</li>
+</ul>
+<ol>
+<li>根据路径删除子模块的记录</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git rm --cached [path]</span><br></pre></td></tr></table></figure>
+<ol>
+<li>编辑“.gitmodules”文件，将子模块的相关配置节点删除掉<br> 清理子模块配置<br></li>
+<li>编辑“ .git/config”文件，将子模块的相关配置节点删除掉<br> 清理子模块配置<br></li>
+<li>手动删除子模块残留的目录<br> 清理脏文件<br></li>
+</ol>
+<h3 id="六-开发流程"><a href="#六-开发流程" class="headerlink" title="六.开发流程"></a>六.开发流程</h3><ul>
+<li><p><strong>Git找回commit</strong></p>
+<p>如果回退到了之前的版本，现在又想退回到现在的版本，用以下命令参考commit id</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reflog</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p><strong>开发流程</strong>（以master为例）</p>
+<ol>
+<li>在master的基础上新建一个分支进行修改</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git co -b newbranch</span><br></pre></td></tr></table></figure>
+<ol>
+<li>在新的newbranch上改好代码后commit</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git add -u</span><br><span class="line">git ci -m <span class="string">"newbranch的修改"</span></span><br></pre></td></tr></table></figure>
+<ol>
+<li>切换到master上拉取最新代码，防止别人上传了代码自己却没有更新</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git co master</span><br><span class="line">git pull origin master</span><br></pre></td></tr></table></figure>
+<ol>
+<li>如果服务器有代码更新，切换回newbranch合并服务器新增代码(如果没有更新，直接执行第5步)</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git co newbranch</span><br><span class="line">git rebase master</span><br></pre></td></tr></table></figure>
+<ol>
+<li>切换到master，合并newbranch代码</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git co master</span><br><span class="line">git rebase newbranch</span><br></pre></td></tr></table></figure>
+<ol>
+<li>提交代码到服务器</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+</ul>
+<h3 id="七-rebase冲突"><a href="#七-rebase冲突" class="headerlink" title="七.rebase冲突"></a>七.rebase冲突</h3><ul>
+<li><strong>有关git rebase的常识</strong><ul>
+<li>对于rebase的顺序<br><br>比如 上例中newbranch和master两个分支的合并<br><br>一开始两分支commit都是1，2，3<br><br>后来newbranch提交了一个4，commit就是1,2,3,4的顺序<br><br>而master拉取服务器更新了5，commit就是1，2，3，5的顺序<br><br>这时我们切换到newbranch，去rebase master，即git rebase master<br><br>rebase后的顺序是1,2,3,5,4<br><br>如果我们当初是切换到master，去rebase newbranch<br><br>rebase后的顺序是1,2,3,4,5<br><br>这里的法则就是，去rebase哪个分支，就把哪个分支塞在下面<br></li>
+<li>对于rebase冲突的解决<br><br>当我们rebase后，看见有冲突，git st后可以看到冲突的文件<br><br>我们通过Android studio找到冲突的文件，去搜索=====或者&lt;&lt;&lt;&lt;&lt;&lt;这些特殊标记就会找到冲突的代码<br><br>修改冲突的代码为你想要的代码后，记得将=====，&lt;&lt;&lt;&lt;&lt;这些特殊符号去掉<br><br>修改好后git add -u,将修改的代码提交到缓冲区<br><br>git rebase –continue继续rebase，这样就将冲突解决了<br><br>如果rebase过程中想取消，git rebase –abort<br></li>
+<li>能过rebase删除某几个commit<br><br>比如newbranch上的commit为1，2，3，4<br><br>这时我想将中间的2和3去掉，变为1，4<br><br>我们首先要将2和3的commit号记下，比如是commit2,commit3<br><br>然后git rebase –onto commit2^空格commit3（commit2后面的^是前一个的意思，这个符号在键盘的数字6上面）<br><br>其实可以是git rebase –onto commit1空格commit3(因为commit2^就是commit1)<br></li>
+</ul>
+</li>
+</ul>
+<h3 id="八-linux常用命令"><a href="#八-linux常用命令" class="headerlink" title="八.linux常用命令"></a>八.linux常用命令</h3><ul>
+<li><p>tab 补全命令<br></p>
+<pre><code>ctrl+c 停止执行&lt;br&gt;
+</code></pre><ul>
+<li><p>文件管理</p>
+<ul>
+<li>pwd 打印当前目录</li>
+<li>cd 进入某个目录<br>cd /home/develop  进入绝对路径<br><br>cd eclipse 进入相对路径<br><br>cd ../ 返回上一级目录<br></li>
+<li>touch [file name]打开或创建一个文件</li>
+<li>mkdir -p [dir name] 创建一个目录 -p为强制创建</li>
+<li>rm -r [file name/dir name] 删除一个文件或目录</li>
+<li>ls -al 列出所有文件（包括隐藏文件）的详细信息<br>-d 只列出该目录的信息<br></li>
+<li>cp -rd [目标文件] [目的文件] 复制文件<br>-r是允许目录cp <br><br>-d是在拷贝软连接时只拷贝软连接，如果不加则会把原文件一起拷过去<br><br>cp -rd test.txt dir/test.txt<br></li>
+<li><p>mv -i [目标文件] [目的文件] 移动文件<br>-i是询问是否覆盖同名文件，如果[目标文件][目的文件]相同，那就是重命名</p>
+</li>
+<li><p>find [dn]　[参数]<br>如：find $HOME -name ‘foxlee’ -o -type f -o -size +20M<br><br>-atime +n ：访问或执行时间大于n天的文件<br><br>-ctime +n ：写入、更改inode属性（例如更改所有者、权限或者连接）时间大于n天的文件<br><br>-mtime +n ：写入时间大于n天的文件<br><br>文件的 Access time，atime 是在读取文件或者执行文件时更改的。<br><br>文件的 Modified time，mtime 是在写入文件时随文件内容的更改而更改的。<br><br>文件的 Create time，ctime 是在写入文件、更改所有者、权限或链接设置时随 Inode 的内容更改而更改的。<br><br>因此，更改文件的内容即会更改 mtime 和 ctime，<br><br>但是文件的 ctime 可能会在 mtime<br>  未发生任何变化时更改，例如，更改了文件的权限，但是文件内容没有变化。<br><br>这里讲一下ls中显示的时间<br><br>ls -lc filename         列出文件的 ctime<br><br>ls -lu filename         列出文件的 atime<br><br>ls -l filename          列出文件的 mtime<br><br>继续讲find的参数<br><br>-name ‘filename’ 直接查找该文件名的文件(注意加引号)<br><br>-type type ：通过文件类型查找 type 包含了 f, b, c, d, l, s 等等<br><br>d 表示该文件为目录；<br><br>f 表示该文件为普通文件；<br><br>b 表示该文件为块设备文件，比如磁盘分区<br><br>l 表示该文件为连接文件（linux file），上边提到的软连接即为该类型;<br><br>c 表示该文件为串行端口设备，例如键盘、鼠标。<br><br>s 表示该文件为套接字文件（socket），用于进程间通信。<br></p>
+</li>
+</ul>
+</li>
+<li><p>文件查看与编辑</p>
+<ul>
+<li><p>vim [fn] 编辑文件  有三种模式（一般模式，编辑模式，命令模式），可以自由切换<br><br>一般模式下移动光标（esc回到一般模式）<br><br>箭头上下左右<br></p>
+</li>
+<li><p>一般模式下查找与替换<br>/word  向光标之后寻找一个字符串名为word的字符串，当找到第一个word后，按”n”继续搜后一个,”N”前一个<br></p>
+</li>
+<li><p>一般模式下删除、复制粘贴<br>dd  删除光标所在的那一行<br><br>yy  复制光标所在的那行<br><br>p,P p复制的数据从光标下一行粘贴，P则从光标上一行粘贴<br><br>u   还原过去的操作<br></p>
+</li>
+<li><p>进入编辑模式(按i进入)<br>i   在当前字符前插入字符<br></p>
+</li>
+<li><p>命令模式（按：进入）<br>:q! 不管编辑或未编辑都不保存退出<br><br>:wq 保存，退出<br><br>:e! 将文档还原成最原始状态<br><br>:set nu  在每行的行首显示行号<br><br>:set nonu 取消行号<br></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.JPG" alt="Kyle wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎您扫一扫上面的微信公众号，订阅我的博客！</div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.JPG" alt="Kyle 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.JPG" alt="Kyle 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Git/" rel="tag"># Git</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03/15/AndroidStudio使用模拟测试/" rel="next" title="AndroidStudio使用模拟测试">
+                <i class="fa fa-chevron-left"></i> AndroidStudio使用模拟测试
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/03/15/alibaba代码检测插件使用/" rel="prev" title="alibaba代码检测插件使用">
+                alibaba代码检测插件使用 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/mavatar.jpg"
+                alt="Kyle" />
+            
+              <p class="site-author-name" itemprop="name">Kyle</p>
+              <p class="site-description motion-element" itemprop="description">胡编一通，乱写一气</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives">
+                
+                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/zhutiankang" target="_blank" title="GitHub"><i class="fa fa-fw fa-globe"></i>GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:zhutiankang@126.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="/images/weixin.JPG" target="_blank" title="微信"><i class="fa fa-fw fa-globe"></i>微信</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://weibo.com/your-user-name" target="_blank" title="微博"><i class="fa fa-fw fa-globe"></i>微博</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://douban.com/people/your-user-name" target="_blank" title="豆瓣"><i class="fa fa-fw fa-globe"></i>豆瓣</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://www.zhihu.com/people/your-user-name" target="_blank" title="知乎"><i class="fa fa-fw fa-globe"></i>知乎</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Git安装"><span class="nav-number">1.</span> <span class="nav-text">Git安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git配置"><span class="nav-number">2.</span> <span class="nav-text">Git配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#配置快捷命令"><span class="nav-number">2.1.</span> <span class="nav-text">配置快捷命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置忽略文件"><span class="nav-number">2.2.</span> <span class="nav-text">配置忽略文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git使用"><span class="nav-number">3.</span> <span class="nav-text">Git使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一-准备工作"><span class="nav-number">3.1.</span> <span class="nav-text">一.准备工作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二-代码管理"><span class="nav-number">3.2.</span> <span class="nav-text">二.代码管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三-分支操作"><span class="nav-number">3.3.</span> <span class="nav-text">三.分支操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四-与远程服务器交互"><span class="nav-number">3.4.</span> <span class="nav-text">四.与远程服务器交互</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五-子模组"><span class="nav-number">3.5.</span> <span class="nav-text">五.子模组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#六-开发流程"><span class="nav-number">3.6.</span> <span class="nav-text">六.开发流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#七-rebase冲突"><span class="nav-number">3.7.</span> <span class="nav-text">七.rebase冲突</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#八-linux常用命令"><span class="nav-number">3.8.</span> <span class="nav-text">八.linux常用命令</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Kyle</span>
+
+  
+
+  
+</div>
+
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a> v6.0.5</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.0.5"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.0.5"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.0.5"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.0.5"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.5"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.5"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.5"></script>
+
+
+
+  
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=6.0.5"></script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

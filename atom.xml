@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-03-14T07:58:12.425Z</updated>
+  <updated>2018-03-15T10:30:41.943Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,130 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>markdown居中</title>
-    <link href="http://yoursite.com/2018/03/14/markdown%E5%B1%85%E4%B8%AD/"/>
-    <id>http://yoursite.com/2018/03/14/markdown居中/</id>
+    <title>alibaba代码检测插件使用</title>
+    <link href="http://yoursite.com/2018/03/15/alibaba%E4%BB%A3%E7%A0%81%E6%A3%80%E6%B5%8B%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8/"/>
+    <id>http://yoursite.com/2018/03/15/alibaba代码检测插件使用/</id>
+    <published>2018-03-15T09:05:14.000Z</published>
+    <updated>2018-03-15T10:30:41.943Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;本文转载自&lt;code&gt;https://github.com/alibaba/p3c/idea-plugin&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;插件安装&quot;&gt;&lt;a href=&quot;#插件安装&quot; class=&quot;headerlink&quot; title=&quot;插件安装&quot;&gt;&lt;/a&gt;插件安装&lt;/h2&gt;&lt;h3 id=&quot;通过Jetbrains官方仓库安装&quot;&gt;&lt;a href=&quot;#通过Jetbrains官方仓库安装&quot; class=&quot;headerlink&quot; title=&quot;通过Jetbrains官方仓库安装&quot;&gt;&lt;/a&gt;通过Jetbrains官方仓库安装&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;打开 Settings &amp;gt;&amp;gt; Plugins &amp;gt;&amp;gt; Browse repositories…&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gw.alicdn.com/tfscom/TB1Qn83ifBNTKJjy1zdXXaScpXa.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="Android" scheme="http://yoursite.com/categories/Android/"/>
+    
+    
+      <category term="插件" scheme="http://yoursite.com/tags/%E6%8F%92%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git基本使用方式</title>
+    <link href="http://yoursite.com/2018/03/15/Git%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F/"/>
+    <id>http://yoursite.com/2018/03/15/Git基本使用方式/</id>
+    <published>2018-03-15T08:07:14.000Z</published>
+    <updated>2018-03-15T08:29:17.146Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Git安装&quot;&gt;&lt;a href=&quot;#Git安装&quot; class=&quot;headerlink&quot; title=&quot;Git安装&quot;&gt;&lt;/a&gt;Git安装&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;地址：&lt;a href=&quot;https://git-scm.com/downloads&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://git-scm.com/downloads&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;下载对应平台的git版本安装即可&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;Git配置&quot;&gt;&lt;a href=&quot;#Git配置&quot; class=&quot;headerlink&quot; title=&quot;Git配置&quot;&gt;&lt;/a&gt;Git配置&lt;/h2&gt;&lt;h3 id=&quot;配置快捷命令&quot;&gt;&lt;a href=&quot;#配置快捷命令&quot; class=&quot;headerlink&quot; title=&quot;配置快捷命令&quot;&gt;&lt;/a&gt;配置快捷命令&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;在用户根目录下（如C:/user/Administrator）&lt;code&gt;新建&lt;/code&gt;配置文件命名为.gitconfig&lt;/li&gt;
+&lt;li&gt;将以下内容写入文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;[user]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	email = xxx(邮箱如：ztk1993@163.com）&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	name = xxx(名字如：zhutiankang）&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;[alias]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	st = status&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	ci = commit&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	br = branch&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	co = checkout&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	glog = log --pretty=oneline&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	fullclone = clone --recursive&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	pus = push origin master&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	pul = !git pull --rebase origin master&amp;amp;&amp;amp; git submodule update --init --recursive&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	lg = log --graph --pretty=format:&amp;apos;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&amp;lt;%an&amp;gt;%Creset&amp;apos; --abbrev-commit&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="Android" scheme="http://yoursite.com/categories/Android/"/>
+    
+    
+      <category term="Git" scheme="http://yoursite.com/tags/Git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AndroidStudio使用模拟测试</title>
+    <link href="http://yoursite.com/2018/03/15/AndroidStudio%E4%BD%BF%E7%94%A8%E6%A8%A1%E6%8B%9F%E6%B5%8B%E8%AF%95/"/>
+    <id>http://yoursite.com/2018/03/15/AndroidStudio使用模拟测试/</id>
+    <published>2018-03-15T08:05:14.000Z</published>
+    <updated>2018-03-15T08:38:04.983Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;绘制布局&quot;&gt;&lt;a href=&quot;#绘制布局&quot; class=&quot;headerlink&quot; title=&quot;绘制布局&quot;&gt;&lt;/a&gt;绘制布局&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://upload-images.jianshu.io/upload_images/580359-40a6436d81203a3d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/488&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;
+&lt;p&gt;为app添加一些Views和简单的交互。使用一个用户可以输入名字的EditText，欢迎用户的Button和用于输出的TextView&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Android" scheme="http://yoursite.com/categories/Android/"/>
+    
+    
+      <category term="测试" scheme="http://yoursite.com/tags/%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo命令</title>
+    <link href="http://yoursite.com/2018/03/15/Hexo%E5%91%BD%E4%BB%A4/"/>
+    <id>http://yoursite.com/2018/03/15/Hexo命令/</id>
+    <published>2018-03-15T08:05:14.000Z</published>
+    <updated>2018-03-15T08:33:14.295Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo new &lt;span class=&quot;string&quot;&gt;&quot;My New Post&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/writing.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Writing&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="tools" scheme="http://yoursite.com/categories/tools/"/>
+    
+    
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AndroidStudio使用单元测试</title>
+    <link href="http://yoursite.com/2018/03/14/AndroidStudio%E4%BD%BF%E7%94%A8%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"/>
+    <id>http://yoursite.com/2018/03/14/AndroidStudio使用单元测试/</id>
+    <published>2018-03-14T08:22:37.000Z</published>
+    <updated>2018-03-15T08:37:52.367Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;创建第一个单元测试&quot;&gt;&lt;a href=&quot;#创建第一个单元测试&quot; class=&quot;headerlink&quot; title=&quot;创建第一个单元测试&quot;&gt;&lt;/a&gt;创建第一个单元测试&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://upload-images.jianshu.io/upload_images/580359-20cce1345b5076de.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;
+&lt;p&gt;向类中添加一些基本的算术运算方法，比如加法和减法。将下列代码复制到编辑器中。不用担心实际的实现，暂时让所有的方法返回0。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Android" scheme="http://yoursite.com/categories/Android/"/>
+    
+    
+      <category term="测试" scheme="http://yoursite.com/tags/%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>markdown对齐</title>
+    <link href="http://yoursite.com/2018/03/14/markdown%E5%AF%B9%E9%BD%90/"/>
+    <id>http://yoursite.com/2018/03/14/markdown对齐/</id>
     <published>2018-03-14T06:43:35.000Z</published>
-    <updated>2018-03-14T07:58:12.425Z</updated>
+    <updated>2018-03-15T08:31:50.000Z</updated>
     
     <summary type="html">
     
@@ -38,39 +157,41 @@
     
     </summary>
     
+      <category term="tools" scheme="http://yoursite.com/categories/tools/"/>
     
-      <category term="语法" scheme="http://yoursite.com/tags/%E8%AF%AD%E6%B3%95/"/>
+    
+      <category term="markdown" scheme="http://yoursite.com/tags/markdown/"/>
     
   </entry>
   
   <entry>
-    <title>分页实验</title>
-    <link href="http://yoursite.com/2018/03/14/%E5%88%86%E9%A1%B5%E5%AE%9E%E9%AA%8C/"/>
-    <id>http://yoursite.com/2018/03/14/分页实验/</id>
+    <title>草原游玩</title>
+    <link href="http://yoursite.com/2018/03/14/%E5%86%85%E8%92%99%E6%B8%B8%E7%8E%A9/"/>
+    <id>http://yoursite.com/2018/03/14/内蒙游玩/</id>
     <published>2018-03-14T02:59:39.000Z</published>
-    <updated>2018-03-15T01:06:52.287Z</updated>
+    <updated>2018-03-15T08:53:16.865Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;第一次做这个东西，也不清楚为什么，先插入一张图片试一试吧，哈哈哈哈&lt;/p&gt;
+      &lt;p&gt;去年国庆节，带上女票和几个好朋友，一起去内蒙呼伦贝尔游玩了一圈，很开森。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/images/mavatar.jpg&quot; alt=&quot;我与小可爱&quot;&gt;&lt;/p&gt;
 &lt;center&gt;内蒙古呼伦贝尔五日游&lt;/center&gt;
     
     </summary>
     
-      <category term="碎碎念" scheme="http://yoursite.com/categories/%E7%A2%8E%E7%A2%8E%E5%BF%B5/"/>
+      <category term="游玩" scheme="http://yoursite.com/categories/%E6%B8%B8%E7%8E%A9/"/>
     
     
-      <category term="category" scheme="http://yoursite.com/tags/category/"/>
+      <category term="我与小可爱" scheme="http://yoursite.com/tags/%E6%88%91%E4%B8%8E%E5%B0%8F%E5%8F%AF%E7%88%B1/"/>
     
   </entry>
   
   <entry>
-    <title>几记一次印象深刻的事情</title>
+    <title>记一次印象深刻的事情</title>
     <link href="http://yoursite.com/2018/03/13/%E8%AE%B0%E4%B8%80%E6%AC%A1%E5%8D%B0%E8%B1%A1%E6%B7%B1%E5%88%BB%E7%9A%84%E4%BA%8B%E6%83%85/"/>
     <id>http://yoursite.com/2018/03/13/记一次印象深刻的事情/</id>
     <published>2018-03-13T08:22:37.000Z</published>
-    <updated>2018-03-14T07:54:30.703Z</updated>
+    <updated>2018-03-15T08:42:30.946Z</updated>
     
     <summary type="html">
     
@@ -81,17 +202,44 @@
     
     </summary>
     
+      <category term="碎碎念" scheme="http://yoursite.com/categories/%E7%A2%8E%E7%A2%8E%E5%BF%B5/"/>
     
-      <category term="碎碎念" scheme="http://yoursite.com/tags/%E7%A2%8E%E7%A2%8E%E5%BF%B5/"/>
+    
+      <category term="琐事" scheme="http://yoursite.com/tags/%E7%90%90%E4%BA%8B/"/>
     
   </entry>
   
   <entry>
-    <title>思虑</title>
-    <link href="http://yoursite.com/2018/03/12/%E6%80%9D%E8%99%91/"/>
-    <id>http://yoursite.com/2018/03/12/思虑/</id>
+    <title>Android单元测试</title>
+    <link href="http://yoursite.com/2018/03/13/Android%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"/>
+    <id>http://yoursite.com/2018/03/13/Android单元测试/</id>
+    <published>2018-03-13T08:05:14.000Z</published>
+    <updated>2018-03-15T10:30:57.534Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;单元测试&quot;&gt;&lt;a href=&quot;#单元测试&quot; class=&quot;headerlink&quot; title=&quot;单元测试&quot;&gt;&lt;/a&gt;单元测试&lt;/h2&gt;&lt;p&gt;单元测试是针对某个单元进行测试,单元可大可小,可能是一个框架的核心处理流程,一个模块的控制逻辑,一个类的实现或者一个函数。在这里你只需要关心一点，那就是单元测试的单元是有边界的，在任何时候你要开始单元测试，请确定已经划分好你的单元。&lt;/p&gt;
+&lt;p&gt;单元测试其测试方式主要是以白盒为主,是最接近开发的测试是可以最早发现问题的测试，在这一步发现问题，就可以有效避免问题在后期被的无限放大。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;单元测试的最大特点是模拟输入输出，任何时候获取输入或者输出的成本太高的时候，都可以考虑使用单元测试。测试对象: 非UI的Class都可以进行单元测试&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;单元测试让你在测试的时候只关心被测试单元，而不必为其输入输出分散精力，比如使用调试的方式来测试一个有8个if-else分支的逻辑，你要启动八次（大约）程序，然后进行一系列操作，这么多事情，最终只是为某个用例创造输入，单元测试里则直接指定输入，一次到位。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Android" scheme="http://yoursite.com/categories/Android/"/>
+    
+    
+      <category term="测试" scheme="http://yoursite.com/tags/%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>学习与彷徨</title>
+    <link href="http://yoursite.com/2018/03/12/%E5%AD%A6%E4%B9%A0%E4%B8%8E%E5%BD%B7%E5%BE%A8/"/>
+    <id>http://yoursite.com/2018/03/12/学习与彷徨/</id>
     <published>2018-03-12T08:22:37.000Z</published>
-    <updated>2018-03-13T07:05:10.380Z</updated>
+    <updated>2018-03-15T08:36:50.275Z</updated>
     
     <summary type="html">
     
@@ -105,49 +253,10 @@
     
     </summary>
     
-    
-      <category term="thinking" scheme="http://yoursite.com/tags/thinking/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>单元测试</title>
-    <link href="http://yoursite.com/2018/03/09/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"/>
-    <id>http://yoursite.com/2018/03/09/单元测试/</id>
-    <published>2018-03-09T08:22:37.000Z</published>
-    <updated>2018-03-13T07:05:19.599Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;创建第一个单元测试&quot;&gt;&lt;a href=&quot;#创建第一个单元测试&quot; class=&quot;headerlink&quot; title=&quot;创建第一个单元测试&quot;&gt;&lt;/a&gt;创建第一个单元测试&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://upload-images.jianshu.io/upload_images/580359-20cce1345b5076de.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;
-&lt;p&gt;向类中添加一些基本的算术运算方法，比如加法和减法。将下列代码复制到编辑器中。不用担心实际的实现，暂时让所有的方法返回0。&lt;/p&gt;
-    
-    </summary>
+      <category term="碎碎念" scheme="http://yoursite.com/categories/%E7%A2%8E%E7%A2%8E%E5%BF%B5/"/>
     
     
-      <category term="test" scheme="http://yoursite.com/tags/test/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2018/03/09/hello-world/"/>
-    <id>http://yoursite.com/2018/03/09/hello-world/</id>
-    <published>2018-03-09T07:07:03.764Z</published>
-    <updated>2018-03-09T07:07:03.765Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
-        
-      
-    
-    </summary>
-    
+      <category term="思考" scheme="http://yoursite.com/tags/%E6%80%9D%E8%80%83/"/>
     
   </entry>
   

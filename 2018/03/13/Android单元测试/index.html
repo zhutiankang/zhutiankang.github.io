@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.0.5" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.0.5">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.0.5">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.0.5">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.0.5" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '6.0.5',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: 'G9CPQM3EB5',
+      apiKey: 'f6c1e74a3e22e48d7bd50c5e91cca69f',
+      indexName: 'blog',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  
+  <meta name="keywords" content="测试," />
+
+
+<meta name="description" content="单元测试单元测试是针对某个单元进行测试,单元可大可小,可能是一个框架的核心处理流程,一个模块的控制逻辑,一个类的实现或者一个函数。在这里你只需要关心一点，那就是单元测试的单元是有边界的，在任何时候你要开始单元测试，请确定已经划分好你的单元。 单元测试其测试方式主要是以白盒为主,是最接近开发的测试是可以最早发现问题的测试，在这一步发现问题，就可以有效避免问题在后期被的无限放大。  单元测试的最大特点">
+<meta name="keywords" content="测试">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android单元测试">
+<meta property="og:url" content="http://yoursite.com/2018/03/13/Android单元测试/index.html">
+<meta property="og:site_name" content="Kyle&#39;s Note">
+<meta property="og:description" content="单元测试单元测试是针对某个单元进行测试,单元可大可小,可能是一个框架的核心处理流程,一个模块的控制逻辑,一个类的实现或者一个函数。在这里你只需要关心一点，那就是单元测试的单元是有边界的，在任何时候你要开始单元测试，请确定已经划分好你的单元。 单元测试其测试方式主要是以白盒为主,是最接近开发的测试是可以最早发现问题的测试，在这一步发现问题，就可以有效避免问题在后期被的无限放大。  单元测试的最大特点">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-03-15T10:30:57.534Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Android单元测试">
+<meta name="twitter:description" content="单元测试单元测试是针对某个单元进行测试,单元可大可小,可能是一个框架的核心处理流程,一个模块的控制逻辑,一个类的实现或者一个函数。在这里你只需要关心一点，那就是单元测试的单元是有边界的，在任何时候你要开始单元测试，请确定已经划分好你的单元。 单元测试其测试方式主要是以白盒为主,是最接近开发的测试是可以最早发现问题的测试，在这一步发现问题，就可以有效避免问题在后期被的无限放大。  单元测试的最大特点">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Kyle's Note" type="application/atom+xml" />
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/03/13/Android单元测试/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+  <title>Android单元测试 | Kyle's Note</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Kyle's Note</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Quick notes</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />公益404</a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+  
+
+
+
+ </div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/13/Android单元测试/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Kyle">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/mavatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kyle's Note">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Android单元测试</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-13T16:05:14+08:00">2018-03-13</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Android/" itemprop="url" rel="index"><span itemprop="name">Android</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="单元测试"><a href="#单元测试" class="headerlink" title="单元测试"></a>单元测试</h2><p>单元测试是针对某个单元进行测试,单元可大可小,可能是一个框架的核心处理流程,一个模块的控制逻辑,一个类的实现或者一个函数。在这里你只需要关心一点，那就是单元测试的单元是有边界的，在任何时候你要开始单元测试，请确定已经划分好你的单元。</p>
+<p>单元测试其测试方式主要是以白盒为主,是最接近开发的测试是可以最早发现问题的测试，在这一步发现问题，就可以有效避免问题在后期被的无限放大。</p>
+<blockquote>
+<p>单元测试的最大特点是模拟输入输出，任何时候获取输入或者输出的成本太高的时候，都可以考虑使用单元测试。测试对象: 非UI的Class都可以进行单元测试</p>
+</blockquote>
+<p>单元测试让你在测试的时候只关心被测试单元，而不必为其输入输出分散精力，比如使用调试的方式来测试一个有8个if-else分支的逻辑，你要启动八次（大约）程序，然后进行一系列操作，这么多事情，最终只是为某个用例创造输入，单元测试里则直接指定输入，一次到位。</p>
+<a id="more"></a>
+<h3 id="Android测试"><a href="#Android测试" class="headerlink" title="Android测试"></a>Android测试</h3><p>测试函数需要<strong>@Test注解 &amp;&amp; public声明</strong></p>
+<blockquote>
+<ul>
+<li>测试一些数据性的功能，比如加载数据</li>
+<li>测试SharedPerferences，测试数据库，测试函数等</li>
+<li>工具类的测试，比如计算，验证时间，转化格式，正则验证等等</li>
+</ul>
+</blockquote>
+<h4 id="单元测试-1"><a href="#单元测试-1" class="headerlink" title="单元测试"></a>单元测试</h4><p>直接在JVM上运行测试，在没有依赖或者仅仅只需要简单的Android库,相当于Java单元测试</p>
+<p>测试代码目录为：<code>app/src/test/java/packagename</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">testCompile <span class="string">'junit:junit:4.12'</span></span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Annotation</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>@Test public void method()</code></td>
+<td style="text-align:left">定义所在方法为<code>单元测试方法</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>@Test (expected = Exception.class)</code></td>
+<td style="text-align:left">如果所在方法没有抛出<code>Annotation</code>中的<code>Exception.class</code>-&gt;失败</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>@Test(timeout=100)</code></td>
+<td style="text-align:left">如果方法耗时超过<code>100</code>毫秒-&gt;失败</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>@Test(expected=Exception.class)</code></td>
+<td style="text-align:left">如果方法抛了Exception.class类型的异常-&gt;通过</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>@Before public void method()</code></td>
+<td style="text-align:left">这个方法在每个测试之前执行，用于准备测试环境(如: 初始化类，读输入流等)</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>@After public void method()</code></td>
+<td style="text-align:left">这个方法在每个测试之后执行，用于清理测试环境数据</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>BeforeClass public static void method()</code></td>
+<td style="text-align:left">这个方法在所有测试开始之前执行一次，用于做一些耗时的初始化工作(如: 连接数据库)</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>AfterClass public static void method()</code></td>
+<td style="text-align:left">这个方法在所有测试结束之后执行一次，用于清理数据(如: 断开数据连接)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="模拟测试"><a href="#模拟测试" class="headerlink" title="模拟测试"></a>模拟测试</h4><p>需要在Android设备上运行测试，主要用于测试界面与业务逻辑</p>
+<p><strong>主要三点</strong>:</p>
+<ul>
+<li>UI加载好后展示的信息是否正确。</li>
+<li>在用户某个操作后UI信息是否展示正确。</li>
+<li>展示正确的页面供用户操作</li>
+</ul>
+<p>测试代码目录为: <code>app/src/androidTest/java/packagename</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">androidTestCompile(<span class="string">'com.android.support.test.espresso:espresso-core:2.2.2'</span>, &#123;</span><br><span class="line">        exclude group: <span class="string">'com.android.support'</span>, <span class="keyword">module</span>: <span class="string">'support-annotations'</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 对于Id为R.id.my_view的View: 触发点击，检测是否显示</span></span><br><span class="line">onView(withId(R.id.my_view)).perform(click()).check(matches(isDisplayed()));</span><br><span class="line"><span class="comment">// 对于文本打头是"ABC"的View: 检测是否没有Enable</span></span><br><span class="line">onView(withText(startsWith(<span class="string">"ABC"</span>))).check(matches(not(isEnabled()));</span><br><span class="line">                                          </span><br><span class="line"><span class="comment">// 按返回键</span></span><br><span class="line">pressBack();</span><br><span class="line"><span class="comment">// 对于Id为R.id.button的View: 检测内容是否是"Start new activity"</span></span><br><span class="line">onView(withId(R.id.button)).check(matches(withText((<span class="string">"Start new activity"</span>))));</span><br><span class="line"><span class="comment">// 对于Id为R.id.viewId的View: 检测内容是否不包含"YYZZ"</span></span><br><span class="line">onView(withId(R.id.viewId)).check(matches(withText(not(containsString(<span class="string">"YYZZ"</span>)))));</span><br><span class="line"><span class="comment">// 对于Id为R.id.inputField的View: 输入"NewText"，然后关闭软键盘</span></span><br><span class="line">onView(withId(R.id.inputField)).perform(typeText(<span class="string">"NewText"</span>), closeSoftKeyboard());</span><br><span class="line"><span class="comment">// 对于Id为R.id.inputField的View: 清除内容</span></span><br><span class="line">onView(withId(R.id.inputField)).perform(clearText());</span><br></pre></td></tr></table></figure>
+<h3 id="JUnit常用语法"><a href="#JUnit常用语法" class="headerlink" title="JUnit常用语法"></a>JUnit常用语法</h3><h4 id="测试数组相等"><a href="#测试数组相等" class="headerlink" title="测试数组相等"></a>测试数组相等</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testAssertArrayEquals</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">byte</span>[] expected = <span class="string">"trial"</span>.getBytes();</span><br><span class="line">    <span class="keyword">byte</span>[] actual = <span class="string">"trial"</span>.getBytes();</span><br><span class="line">    Assert.assertArrayEquals(<span class="string">"failure - byte arrays not same"</span>, expected, actual);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<h4 id="测试相等"><a href="#测试相等" class="headerlink" title="测试相等"></a>测试相等</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testAssertEquals</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Assert.assertEquals(<span class="string">"failure - strings are not equal"</span>, <span class="string">"text"</span>, <span class="string">"text"</span>);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<h4 id="测试条件（True-False"><a href="#测试条件（True-False" class="headerlink" title="测试条件（True/False)"></a>测试条件（True/False)</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testAssertFalse</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  Assert.assertFalse(<span class="string">"failure - should be false"</span>, <span class="keyword">false</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testAssertTrue</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  Assert.assertTrue(<span class="string">"failure - should be true"</span>, <span class="keyword">true</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="测试空值（Null-Not-Null"><a href="#测试空值（Null-Not-Null" class="headerlink" title="测试空值（Null/Not Null)"></a>测试空值（Null/Not Null)</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testAssertNotNull</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  Assert.assertNotNull(<span class="string">"should not be null"</span>, <span class="keyword">new</span> Object());</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testAssertNull</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  Assert.assertNull(<span class="string">"should be null"</span>, <span class="keyword">null</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="测试相同"><a href="#测试相同" class="headerlink" title="测试相同"></a>测试相同</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testAssertNotSame</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  Assert.assertNotSame(<span class="string">"should not be same Object"</span>, <span class="keyword">new</span> Object(), <span class="keyword">new</span> Object());</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testAssertSame</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  Integer aNumber = Integer.valueOf(<span class="number">768</span>);</span><br><span class="line">  Assert.assertSame(<span class="string">"should be same"</span>, aNumber, aNumber);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="测试异常"><a href="#测试异常" class="headerlink" title="测试异常"></a>测试异常</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span>(expected= IndexOutOfBoundsException.class)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">empty</span><span class="params">()</span> </span>&#123; <span class="keyword">new</span> ArrayList&lt;Object&gt;().get(<span class="number">0</span>); &#125;</span><br></pre></td></tr></table></figure>
+<h4 id="测试超时"><a href="#测试超时" class="headerlink" title="测试超时"></a>测试超时</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">  <span class="meta">@Test</span>(timeout=<span class="number">1000</span>)</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testWithTimeout</span><span class="params">()</span> </span>&#123;</span><br><span class="line"><span class="comment">//    while(true)&#123;</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//    &#125;</span></span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<h4 id="测试Rule"><a href="#测试Rule" class="headerlink" title="测试Rule"></a>测试Rule</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Rule</span></span><br><span class="line"><span class="keyword">public</span> TemporaryFolder tempFolder = <span class="keyword">new</span> TemporaryFolder();</span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">countsAssets</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">  File icon = tempFolder.newFile(<span class="string">"icon.png"</span>);</span><br><span class="line">  Assert.assertTrue(icon.exists());</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Before</span></span><br><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setUp</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">      <span class="keyword">if</span> (mCalculator == <span class="keyword">null</span>)&#123;</span><br><span class="line">          mCalculator = <span class="keyword">new</span> Calculator();</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p>自定义Rule Rule的作用是你不必在每一个类的测试代码中写@Before, @After而仅仅需要定义一个对象。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RunWith</span>(AndroidJUnit4.class)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SecondActivityTest</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Rule</span></span><br><span class="line">    <span class="keyword">public</span> ActivityTestRule&lt;SecondActivity&gt; rule =</span><br><span class="line">            <span class="keyword">new</span> ActivityTestRule(SecondActivity.class, <span class="keyword">true</span>,<span class="keyword">false</span>);</span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">demonstrateIntentPrep</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        Intent intent = <span class="keyword">new</span> Intent();</span><br><span class="line">        intent.putExtra(<span class="string">"EXTRA"</span>, <span class="string">"Test"</span>);</span><br><span class="line">        <span class="comment">// 启动SecondActivity并传入intent</span></span><br><span class="line">		<span class="comment">//测试Activity生命周期等</span></span><br><span class="line">        rule.launchActivity(intent);<span class="comment">//</span></span><br><span class="line">        <span class="comment">// 对于Id为R.id.display的View: 检测内容是否是"Text"</span></span><br><span class="line">        onView(withId(R.id.display)).check(matches(withText(<span class="string">"Test"</span>)));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="AssertJ-Android"><a href="#AssertJ-Android" class="headerlink" title="AssertJ Android"></a>AssertJ Android</h4><p>提高断言可读性：<a href="https://github.com/square/assertj-android" target="_blank" rel="noopener">AssertJ Android</a></p>
+<ul>
+<li><p>AssertJ Android:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">assertThat(layout).isVisible()</span><br><span class="line">    .isVertical()</span><br><span class="line">    .hasChildCount(<span class="number">4</span>)</span><br><span class="line">    .hasShowDividers(SHOW_DIVIDERS_MIDDLE);</span><br><span class="line"></span><br><span class="line">assertThat(layout.getVisibility()).isEqualTo(View.VISIBLE);</span><br><span class="line">assertThat(layout.getOrientation()).isEqualTo(VERTICAL);</span><br><span class="line">assertThat(layout.getChildCount()).isEqualTo(<span class="number">4</span>);</span><br><span class="line">assertThat(layout.getShowDividers()).isEqualTo(SHOW_DIVIDERS_MIDDLE);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Regular JUnit:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">assertEquals(View.VISIBLE, layout.getVisibility());</span><br><span class="line">assertEquals(VERTICAL, layout.getOrientation());</span><br><span class="line">assertEquals(<span class="number">4</span>, layout.getChildCount());</span><br><span class="line">assertEquals(SHOW_DIVIDERS_MIDDLE, layout.getShowDividers());</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<p><strong>本文作者：</strong> Kyle</p>
+<p><strong>本文链接：</strong> <a href="https://zhutiankang.github.io" target="_blank" rel="noopener">https://zhutiankang.github.io</a></p>
+<p><strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 CN</a> 许可协议。转载请注明出处！</p>
+</blockquote>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.JPG" alt="Kyle wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎您扫一扫上面的微信公众号，订阅我的博客！</div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.JPG" alt="Kyle 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.JPG" alt="Kyle 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/测试/" rel="tag"># 测试</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03/12/学习与彷徨/" rel="next" title="学习与彷徨">
+                <i class="fa fa-chevron-left"></i> 学习与彷徨
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/03/13/记一次印象深刻的事情/" rel="prev" title="记一次印象深刻的事情">
+                记一次印象深刻的事情 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/mavatar.jpg"
+                alt="Kyle" />
+            
+              <p class="site-author-name" itemprop="name">Kyle</p>
+              <p class="site-description motion-element" itemprop="description">胡编一通，乱写一气</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives">
+                
+                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/zhutiankang" target="_blank" title="GitHub"><i class="fa fa-fw fa-globe"></i>GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:zhutiankang@126.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="/images/weixin.JPG" target="_blank" title="微信"><i class="fa fa-fw fa-globe"></i>微信</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://weibo.com/your-user-name" target="_blank" title="微博"><i class="fa fa-fw fa-globe"></i>微博</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://douban.com/people/your-user-name" target="_blank" title="豆瓣"><i class="fa fa-fw fa-globe"></i>豆瓣</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="http://www.zhihu.com/people/your-user-name" target="_blank" title="知乎"><i class="fa fa-fw fa-globe"></i>知乎</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#单元测试"><span class="nav-number">1.</span> <span class="nav-text">单元测试</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Android测试"><span class="nav-number">1.1.</span> <span class="nav-text">Android测试</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#单元测试-1"><span class="nav-number">1.1.1.</span> <span class="nav-text">单元测试</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模拟测试"><span class="nav-number">1.1.2.</span> <span class="nav-text">模拟测试</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JUnit常用语法"><span class="nav-number">1.2.</span> <span class="nav-text">JUnit常用语法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#测试数组相等"><span class="nav-number">1.2.1.</span> <span class="nav-text">测试数组相等</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#测试相等"><span class="nav-number">1.2.2.</span> <span class="nav-text">测试相等</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#测试条件（True-False"><span class="nav-number">1.2.3.</span> <span class="nav-text">测试条件（True/False)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#测试空值（Null-Not-Null"><span class="nav-number">1.2.4.</span> <span class="nav-text">测试空值（Null/Not Null)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#测试相同"><span class="nav-number">1.2.5.</span> <span class="nav-text">测试相同</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#测试异常"><span class="nav-number">1.2.6.</span> <span class="nav-text">测试异常</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#测试超时"><span class="nav-number">1.2.7.</span> <span class="nav-text">测试超时</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#测试Rule"><span class="nav-number">1.2.8.</span> <span class="nav-text">测试Rule</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#AssertJ-Android"><span class="nav-number">1.2.9.</span> <span class="nav-text">AssertJ Android</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Kyle</span>
+
+  
+
+  
+</div>
+
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a> v6.0.5</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.0.5"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.0.5"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.0.5"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.0.5"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.5"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.5"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.5"></script>
+
+
+
+  
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=6.0.5"></script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
